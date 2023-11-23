@@ -1,10 +1,10 @@
 ﻿namespace TextAlign
 {
-    internal class TextBoxRight
+    internal class TextBoxCenter
     {
         private Stack<string> _words;
 
-        public TextBoxRight(string text)
+        public TextBoxCenter(string text)
         {
             var wordsReversed = text.Split(' ').Reverse();
             _words = new Stack<string>(wordsReversed);
@@ -26,8 +26,8 @@
             {
                 var nextLineWords = GetNextLine(width - 4);
                 var line = string.Join(' ', nextLineWords);
-                var whitespaceCount = width - line.Length;
-                Write(line, x + whitespaceCount - 4, y);
+                var whitespaceCount = (width - line.Length)/2;
+                Write(line, x + whitespaceCount - 2, y);
                 y++;
                 if (y > maxY) break;
             }
@@ -61,5 +61,6 @@
                 Console.Write(letter);
             }
         }
+
     }
 }

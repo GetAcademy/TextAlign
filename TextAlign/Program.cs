@@ -1,6 +1,13 @@
 ﻿using TextAlign;
 
-var textBox = new TextBoxLeft("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum");
-textBox.Show(0, 0, 50, 10);
+var text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ";
+
+var textBoxLeft = new TextBoxLeft(text);
+var textBoxRight = new TextBoxRight(text);
+var textBoxCenter = new TextBoxCenter(text);
+
+textBoxLeft.Show(0, 0, 30, 10);
+textBoxRight.Show(32, 0, 30, 10);
+textBoxCenter.Show(64, 0, 30, 10);
 
 Console.SetCursorPosition(0, 12);
