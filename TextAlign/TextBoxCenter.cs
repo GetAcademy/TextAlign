@@ -2,7 +2,7 @@
 {
     internal class TextBoxCenter
     {
-        private Stack<string> _words;
+        private readonly Stack<string> _words;
 
         public TextBoxCenter(string text)
         {
